@@ -8,7 +8,7 @@ let ItemList = React.createClass({
       <div>
         {this.props.items.map(function (item) {
           return (
-            <Item addToCart={that.props.addToCart} title={item.title} img={item.img} price={item.price}></Item>
+            <Item key={item.id} addToCart={that.props.addToCart} title={item.title} img={item.img} price={item.price}></Item>
           )
         })}
       </div>
