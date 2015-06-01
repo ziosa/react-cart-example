@@ -10,7 +10,11 @@ let Item = React.createClass({
               <h2>{this.props.title}</h2>
               <img src={this.props.img}/>
               <p>{this.props.price}</p>
-                <input type="button" value="Add item" onClick={this.addItem} />
+              <input
+                type="button"
+                value="Add item"
+                onClick={this.addItem}
+              />
             </div>
           );
   }

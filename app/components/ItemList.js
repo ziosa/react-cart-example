@@ -3,13 +3,19 @@ import Item from './item';
 
 let ItemList = React.createClass({
   render(){
+    const row = this.props.items.map((item) => {
+          return (
+            <Item
+              key={item.id}
+              addToCart={this.props.addToCart}
+              title={item.title}
+              img={item.img}
+              price={item.price}
+            />
+          )});
     return (
       <div>
-        {this.props.items.map(function (item) {
-          return (
-            <Item key={item.id} addToCart={this.props.addToCart} title={item.title} img={item.img} price={item.price}></Item>
-          )
-        }.bind(this))}
+        {row}
       </div>
     );
   }
