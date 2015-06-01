@@ -1,16 +1,6 @@
 import React from 'react';
+import ItemList from './itemList';
 
-let Item = React.createClass({
-  render() {
-    return (
-            <div>
-              <h2>{this.props.title}</h2>
-              <img src={this.props.img}/>
-              <p>{this.props.price}</p>
-            </div>
-          );
-  }
-});
 
 let Cart = React.createClass({
   render() {
@@ -18,25 +8,14 @@ let Cart = React.createClass({
   }
 });
 
-let ItemList = React.createClass({
-  render(){
-    return (
-      <div>
-        {this.props.items.map(function (item) {
-          return (
-            <Item title={item.title} img={item.img} price={item.price}></Item>
-          )
-        })}
-      </div>
-    );
-  }
-});
-
 let App = React.createClass({
+  addToCart: function(newState) {
+    console.log("padre chiamato");
+  },
   render() {
     return (
         <div>
-          <ItemList items={this.props.items}></ItemList>
+          <ItemList addToCart={this.addToCart}          items={this.props.items}></ItemList>
           <Cart />
         </div>
     );
