@@ -12,3 +12,9 @@ After that, install react-helloworld downloading the [latest release](https://gi
       $ npm run dev
 
 You are now ready to go, your applcation is available at http://127.0.0.1:8080.
+
+### TODO
+      - Order items
+      - Filter items
+      - remove items from the Cart
+      - css
