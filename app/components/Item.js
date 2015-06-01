@@ -2,7 +2,6 @@ import React from 'react';
 
 let Item = React.createClass({
   addItem: function() {
-    console.log(this);
     this.props.addToCart();
   },
   render() {

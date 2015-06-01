@@ -10,7 +10,7 @@ let Cart = React.createClass({
 
 let App = React.createClass({
   addToCart: function(newState) {
-    console.log("padre chiamato");
+  
   },
   render() {
     return (
