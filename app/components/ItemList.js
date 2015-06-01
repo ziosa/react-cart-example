@@ -2,17 +2,12 @@ import React from 'react';
 import Item from './item';
 
 const ItemList = React.createClass({
-  render(){
+  render() {
     const row = this.props.items.map((item) => {
-          return (
-            <Item
-              key={item.id}
-              addToCart={this.props.addToCart}
-              title={item.title}
-              img={item.img}
-              price={item.price}
-            />
-          )});
+      return (
+        <Item addToCart={this.props.addToCart} img={item.img} key={item.id} price={item.price} title={item.title}/>
+      )
+    });
     return (
       <div>
         {row}
@@ -21,5 +16,5 @@ const ItemList = React.createClass({
   }
 });
 
-
-export default ItemList;
+export
+default ItemList;
