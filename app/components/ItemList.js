@@ -1,7 +1,7 @@
 import React from 'react';
 import Item from './item';
 
-let ItemList = React.createClass({
+const ItemList = React.createClass({
   render(){
     const row = this.props.items.map((item) => {
           return (
