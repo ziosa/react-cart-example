@@ -20,7 +20,7 @@ const Cart = React.createClass({
           {this.props.items.map(createItem)}
         </ul>
         <h2>
-          Total: {this.props.totalPrice}
+          Total: {this.props.items.reduce((sum,item) => sum+item.price,0)}
         </h2>
       </div>
     );
