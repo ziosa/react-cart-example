@@ -1,20 +1,49 @@
-# react-helloworld
-Simple [ReactJS](https://facebook.github.io/react/) Hello World using [babel-loader](https://github.com/babel/babel-loader) and [Webpack](https://github.com/webpack/webpack).
+# react-cart-example
+This is my attempt to play around with [ReactJS](https://facebook.github.io/react/).
 
+## Tools
 
-### Getting started
-Install **node.js**.
+* [webpack](https://github.com/webpack/webpack)
+* [react-hot-loader](https://github.com/gaearon/react-hot-loader)
+* [eslint](http://eslint.org/)
 
-After that, install react-helloworld downloading the [latest release](https://github.com/ziosa/react-helloworld/releases) (or clone the master branch if you want to run the development version). Unzip the project and cd into it, then install npm dependencies, and run the application in development mode.
+### Available Commands
 
-      $ npm install
-      $ webpack
-      $ npm run dev
+```shell
+npm start
+```
 
-You are now ready to go, your applcation is available at http://127.0.0.1:8080.
+run the [webpack-dev-server](http://webpack.github.io/docs/webpack-dev-server.html) with hot-reloading.
+Access the application at http://localhost:8000
+
+```shell
+npm run build
+```
+
+run webpack in production mode, and build the optimized bundle inside `src/build` folder with source-map.
+Access the application at http://localhost:8000
+
+```shell
+npm run serve-build
+```
+
+serve the production ready application on http://localhost:8000
+Since we bundled the file with source-mapping support, you'll be able to debug it using chrome-dev-tools.
+
+```shell
+npm run eslint
+```
+
+```shell
+npm run jscs
+```
+
 
 ### TODO
-      - Order items
-      - Filter items
-      - remove items from the Cart
-      - css
+* Order items
+* Filter items
+* remove items from the Cart
+* [css](https://github.com/MicheleBertoli/css-in-js)
+* tests
+* using some flux approach?
+* loading initial data asynchronously

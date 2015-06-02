@@ -5,8 +5,13 @@ const ItemList = React.createClass({
   render() {
     const row = this.props.items.map((item) => {
       return (
-        <Item addToCart={this.props.addToCart} img={item.img} key={item.id} price={item.price} title={item.title}/>
-      )
+        <Item
+          addToCart={this.props.addToCart}
+          img={item.img} key={item.id}
+          price={item.price}
+          title={item.title}
+        />
+      );
     });
     return (
       <div>
