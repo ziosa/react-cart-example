@@ -4,7 +4,7 @@ const Cart = React.createClass({
   render() {
     const cartRow = this.props.items.map((item) => {
       return (
-        <li>
+        <li key={item.id}>
           <h2>
             Name: {item.title} Price:{item.price}
           </h2>
