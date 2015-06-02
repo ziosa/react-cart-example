@@ -30,8 +30,8 @@ var items = [
   }
 ];
 
-main();
+// Expose globally for debugging purpose
+window.React = React;
 
-function main() {
-  React.render(<App items={items}></App>, document.body);
-}
+React.render(<App items={items} />,
+    document.getElementById('root'));
