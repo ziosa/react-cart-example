@@ -3,7 +3,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --hot --port 8000 --content-base src",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.config.js",
-    "serve-build": "NODE_ENV=production ./node_modules/.bin/webpack-dev-server --port 8000 --content-base src"
+    "serve-build": "NODE_ENV=production ./node_modules/.bin/webpack-dev-server --port 8000 --content-base src",
+    "eslint": "./node_modules/.bin/eslint .",
+    "jscs": "./node_modules/.bin/jscs ./src"
   },
   "dependencies": {
     "react": "^0.13.3"
