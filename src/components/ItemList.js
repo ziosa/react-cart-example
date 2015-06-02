@@ -7,7 +7,7 @@ const ItemList = React.createClass({
       return (
         <Item
           addToCart={this.props.addToCart}
-          img={item.img} key={item.id}
+          img={item.img} key={item.id} id={item.id}
           price={item.price}
           title={item.title}
         />

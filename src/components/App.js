@@ -8,8 +8,11 @@ const App = React.createClass({
       itemsInCart: []
     };
   },
-  addToCart: function (item) {
-    let allItems = this.state.itemsInCart.concat([item]);
+  addToCart: function (indexItem,cntItem) {
+    let copyItems = this.props.items.slice();
+    let currentItem = copyItems.filter(item => item.id === indexItem);
+    currentItem[0].price=currentItem[0].price*cntItem;
+    let allItems = this.state.itemsInCart.concat(currentItem);
     this.setState({
       itemsInCart: allItems,
     });
