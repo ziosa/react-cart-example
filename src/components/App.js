@@ -32,7 +32,7 @@ const App = React.createClass({
   },
   render() {
     return (
-      <div>
+      <div className="row">
         <ItemList addToCart={this.addToCart} items={this.props.items}/>
         <Cart items={this.state.itemsInCart}/>
       </div>

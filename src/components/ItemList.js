@@ -10,11 +10,13 @@ const ItemList = React.createClass({
           img={item.img} key={item.id} id={item.id}
           price={item.price}
           title={item.title}
+          desc={item.desc}
         />
       );
     });
     return (
-      <div>
+      <div  className="col-md-6">
+        <h1>Product List</h1>
         {row}
       </div>
     );

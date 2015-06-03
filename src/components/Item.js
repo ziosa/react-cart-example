@@ -8,7 +8,7 @@ const Item = React.createClass({
   },
   addItem: function (e) {
     e.preventDefault();
-    this.props.addToCart(this.props.id,this.state.cntItem);
+    this.props.addToCart(this.props.id, this.state.cntItem);
   },
   onChange: function (e) {
     this.setState({
@@ -17,21 +17,28 @@ const Item = React.createClass({
   },
   render() {
     return (
-      <div>
-        <h2>
-          {this.props.title}
-        </h2>
-        <img src={this.props.img}/>
-        <p>
-          {this.props.price}
-        </p>
-        <form onSubmit={this.addItem}>
-          <input onChange={this.onChange} ref='cntItem' type='text' value={this.state.cntItem}/>
-          <input type='submit' value='Add to Cart'/>
-        </form>
+      <div className="row">
+        <div claclassNamess="col-sm-6 col-md-4">
+          <div className="thumbnail">
+            <h3>{this.props.title}</h3>
+            <img alt="photo" className="img-circle" src={this.props.img}/>
+            <div className="caption">
+              <p>
+                {this.props.desc}
+                <h3>
+                  Price : {this.props.price} €</h3>
+              </p>
+              <form className="form-inline" onSubmit={this.addItem}>
+                <input className="btn btn-default" onChange={this.onChange} placeholder="Enter quantity" ref='cntItem' type='text' value={this.state.cntItem}/>
+                <input className="btn btn-default" type='submit' value='Add to Cart'/>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 });
 
-export default Item;
+export
+default Item;

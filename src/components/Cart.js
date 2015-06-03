@@ -13,7 +13,7 @@ const Cart = React.createClass({
     });
     let totalValue = this.props.items.reduce((sum,item) => sum+item.price,0);
     return (
-      <div>
+      <div  className="col-md-6">
         <h1>
           Cart:
         </h1>
