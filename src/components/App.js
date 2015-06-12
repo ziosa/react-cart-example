@@ -17,14 +17,14 @@ const App = React.createClass({
       copyItems;
     if (!_.isUndefined(findItem)) {
       currentItem = this.props.items.filter(item => item.id === indexItem)[0];
-      findItem.price += currentItem.price * cntItem;
+      findItem.cntItem = cntItem;
       this.setState({
         itemsInCart: this.state.itemsInCart
       });
     } else {
       copyItems = _.clone(this.props.items, true);
       currentItem = copyItems.filter(item => item.id === indexItem)[0];
-      currentItem.price = currentItem.price * cntItem;
+      currentItem.cntItem = cntItem;
       this.setState({
         itemsInCart: this.state.itemsInCart.concat(currentItem)
       });
@@ -34,7 +34,7 @@ const App = React.createClass({
     return (
       <div className="row">
         <ItemList addToCart={this.addToCart} items={this.props.items}/>
-        <Cart items={this.state.itemsInCart}/>
+        <Cart items={this.state.itemsInCart} />
       </div>
     );
   }
